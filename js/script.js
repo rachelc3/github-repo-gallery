@@ -51,3 +51,9 @@ repoList.addEventListener("click", function (e) {
     getRepoInfo(repoName);
   }
 });
+
+const getRepoInfo = async function (repoName) {
+  const fetchInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+  const repoInfo = await fetchInfo.json();
+  console.log(repoInfo);
+};
