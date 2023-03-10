@@ -39,6 +39,7 @@ const gitRepos = async function () {
 };
 
 const displayRepos = function (repos) {
+  filterInput.classList.remove("hide");
   for (const repo of repos) {
     const repoItem = document.createElement("li");
     repoItem.classList.add("repo");
