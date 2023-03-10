@@ -85,3 +85,9 @@ const displayRepoInfo = function (repoInfo, languages) {
 `;
 repoData.append(div);
 };
+
+viewReposButton.addEventListener("click", function () {
+  allReposContainer.classList.remove("hide");
+  repoData.classList.add("hide");
+  viewReposButton.classList.add("hide");
+});
